@@ -1,0 +1,25 @@
+Finance::Quote::ESPA - Obtain quotes from Erste-Sparinvest KAG.
+
+Copyright (c) 2004 by Markus Winand <mws@fatalmind.com>
+
+See COPYRIGHT section in the Finance::Quote::ESPA(3pm) manpage.
+
+Installation
+------------
+    Finance::Quote::ESPA is a pure perl implemented module and 
+    should therefore run everywhere where perl is already 
+    installed.
+
+    The well known procedure is:
+        perl Makefile.PL
+        make
+        make test
+        make install
+
+
+Authors contact
+---------------
+       e-mail: mws@fatalmind.com
+     homepage: http://www.fatalmind.com/
+    whishlist: http://www.amazon.de/exec/obidos/wishlist/1JW6LC92SAK62/
+               http://amazon.com/gp/registry/3BXRJP9W3WMDX
