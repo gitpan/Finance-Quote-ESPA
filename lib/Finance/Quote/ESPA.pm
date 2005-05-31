@@ -1,8 +1,8 @@
 #! /usr/bin/perl -w
 #*********************************************************************
 #*** Finance::Quote::ESPA
-#*** Copyright (c) 2004 by Markus Winand <mws@fatalmind.com>
-#*** $Id: ESPA.pm,v 1.1 2004/11/13 19:37:09 mws Exp $
+#*** Copyright (c) 2004,2005 by Markus Winand <mws@fatalmind.com>
+#*** $Id: ESPA.pm,v 1.2 2005/05/31 18:46:45 mws Exp $
 #*********************************************************************
 package Finance::Quote::ESPA;
 
@@ -30,8 +30,8 @@ sub _getKeys($) {
 
 	foreach my $line (split /\n/, $file) {
 		my @record = split /;/, $line;
-		if ($record[3] =~ /^(\d+)\s+(.*)\s+\((...)\)$/) {
-			my $kn = $1;
+		if ($record[3] =~ /^(A?T?\d+)\s+(.*)\s+\((...)\)$/) {
+			my $kn = _isin2wkn($1);
 			my $variant = $2;
 			my $currency = $3;
 			$wkn{$kn} = $record[2];
@@ -160,7 +160,7 @@ Erste-Sparinvest KAG http://www.sparinvest.com/
 
 =head1 AUTHOR
 
-   Copyright (C) 2004 by Markus Winand <mws@fatalmind.com>
+   Copyright (C) 2004,2005 by Markus Winand <mws@fatalmind.com>
 
    This program is free software; you can redistribute it and/or
    modify it under the same terms as Perl itself.
